@@ -44,3 +44,11 @@ def estimate_temp(file_path, sr=22050):
         final_tempo /= 2
 
     return final_tempo
+
+def tempo_label(tempo):
+    if tempo < 100:
+        return 0  # slow
+    elif tempo <= 140:
+        return 1  # mid
+    else:
+        return 2  # fast
